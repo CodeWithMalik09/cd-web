@@ -1,0 +1,374 @@
+.clh {
+    height: 40vh;
+    width: 100%;
+    background-image: url('https://coachingdetail.com/assets/pagetitle_list.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-position-y: -10rem;
+    background-position: center;
+
+    @include respond(phone) {
+        // height: 26vh;
+        height: auto;
+    }
+
+    &__c {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & .course {
+            position: relative;
+            height: 40vh;
+
+            @include respond(phone){
+                height: 28vh;
+            }
+
+            & h2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                font-size: 5.6rem;
+                font-family: $primary-font;
+                color: white;
+                padding: 0rem 4rem;
+                border-top-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+                background: #FF512F;
+                white-space: nowrap;
+                // background: -webkit-linear-gradient(to right, #F09819, #FF512F);
+                background: linear-gradient(to right, #F09819, #FF512F);
+            
+
+                @include respond(phone){
+                    font-size: 4.2rem;
+                    padding: 1rem 4rem;
+                }
+            }
+        }
+
+        &-t {
+            font-size: 1.6rem;
+            color: white;
+            font-family: $primary-font;
+            text-align: center;
+
+            @include respond(tab) {
+                margin-top: 1.8rem;
+            }
+        }
+
+        &-s {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 2rem;
+
+            @include respond(tab) {
+                flex-direction: column;
+                width: 80%;
+                margin-top: 1rem;
+            }
+
+            //Categories
+            &-c,
+            &-ms {
+                // height: 7.2rem;
+                // background-color: rgb(240, 240, 240);
+                background-color: white;
+                margin-right: 1px;
+                width: 50%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1.4rem 1.4rem;
+                cursor: pointer;
+
+                & p {
+                    font-size: 1.6rem;
+                    font-family: $primary-font;
+                }
+
+                & i {
+                    font-size: 2.4rem;
+                }
+            }
+
+            &-c {
+                cursor: pointer;
+                position: relative;
+
+                @include respond(tab) {
+                    width: 100%;
+                    margin: 2px;
+                    border-radius: 3px;
+                }
+
+                &:first-child {
+                    border-top-left-radius: 3px;
+                    border-bottom-left-radius: 3px;
+                }
+
+
+            }
+
+            &-st {
+                position: relative;
+                width: 40vw;
+                padding: 1.4rem 2rem;
+                font-size: 1.6rem;
+                font-family: $primary-font;
+                border: none;
+                background-color: white;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                @include respond(tab) {
+                    width: 100%;
+                    margin-top: 2px;
+                    border-radius: 3px;
+                }
+
+                & i {
+                    margin-left: auto;
+                }
+            }
+
+            & #mapview{
+                @include respond(phone){
+                    width: 100%;
+                }
+            }
+
+            &-ms {
+                width: 17rem;
+                background-color: $color-secondary;
+                color: white;
+                justify-content: space-around;
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+
+                @include respond(tab) {
+                    margin-top: 4px;
+                    margin-bottom: 8px;
+                    flex: 1;
+                    border-radius: 3px;
+                    justify-content: center;
+                    width: 100%;
+                }
+
+                & .material-icons {
+                    font-size: 2.4rem;
+
+                    @include respond(tab) {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.bc {
+    height: 5.4rem;
+    width: 100%;
+    background-color: white;
+
+    &__c {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 6rem;
+
+        @include respond(tab) {
+            padding: 0 2rem;
+        }
+
+        & p {
+            font-size: 1.6rem;
+            font-family: $primary-font;
+
+            @include respond(tab) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+.cl {
+    // height: 90vh;
+    width: 100%;
+
+    &__c {
+        padding-top: 3rem;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+
+
+        //Filter Coachings
+        &-f {
+            position: sticky;
+            top: 8rem;
+            width: 26rem;
+            height: 100%;
+            height: calc(100vh - 9rem);
+            // margin-left: 12rem;
+            margin-bottom: 6rem;
+            background-color: white;
+            border-radius: 3px;
+            box-shadow: 0px 0px 4px rgba(gray, 0.2);
+            overflow-y: auto;
+
+            @include respond(phone) {
+                display: none;
+            }
+
+
+            &-c {
+                // padding: 1rem;
+
+                &-h {
+                    padding: 1rem;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    font-family: $primary-font;
+                    border-bottom: 2px solid rgba(gray, 0.2);
+                    position: sticky;
+                    top: 0;
+                    background-color: white;
+                }
+
+                &-i {
+                    border-bottom: 1px solid rgba(gray, 0.1);
+                }
+
+                &-sh {
+                    padding: 1rem;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    font-family: $primary-font;
+
+                    // &:not(:last-child){
+                    //     border-bottom: 1px solid rgba(gray,0.2);
+                    // }
+                }
+
+                &-cbx {
+                    padding: 0.6rem 1.6rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    & label {
+                        font-size: 1.4rem;
+                        font-family: $primary-font;
+                        margin-left: 1rem;
+                    }
+
+                    & input {
+                        border: 2px solid gray;
+                    }
+                }
+            }
+        }
+
+        &-cl {
+            width: calc(100vw - 44rem);
+            margin-left: 2rem;
+
+            @include respond(phone) {
+                width: 100% !important;
+                margin-left: 0;
+                padding: 1rem;
+            }
+
+            &-c {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                & .empty {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 4rem;
+                    margin-bottom: 4rem;
+
+                    & img {
+                        height: 80vh;
+
+                        @include respond(tab) {
+                            width: 80%;
+                            height: auto;
+                        }
+                    }
+
+                    & p {
+                        font-size: 1.6rem;
+                        font-family: $primary-font;
+                        margin-top: 2rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//Dropdown Button
+.btn__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    // height: calc(4.4rem * 5);
+    z-index: 10;
+    background-color: white;
+
+    &-ul {
+        list-style: none;
+        height: 0;
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.5s;
+
+        & li {
+            height: 4.4rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-top: 1px solid rgba(gray, 0.2);
+            padding: 1.8rem 2.4rem;
+
+
+            &:hover {
+                background-color: $color-primary;
+            }
+
+            &:hover p {
+                color: white;
+            }
+        }
+    }
+}

@@ -1,0 +1,236 @@
+.f{
+    // margin-top: 40vh;
+    position: relative;
+    width: 100%;
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: column;
+
+    & h5{
+        font-size: 2.8rem;
+        text-align: center;
+        color: white;
+        font-family: $primary-font;
+        margin: 2rem 0;
+
+        @include respond(phone){
+            font-size: 2.4rem;
+        }
+    }
+
+
+    &__c{
+        padding: 0rem 3rem 1rem 3rem;
+        display: flex;
+        flex-direction: row;
+        // align-items: center;
+        justify-content: space-between;
+
+        @include respond(phone){
+            padding: 1rem 2rem;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+
+        &:first-child{
+            padding: 6rem 3rem 0rem 3rem;
+        }
+
+        &:nth-child(2){
+            padding: 1rem 3rem 1rem 3rem;
+        }
+
+        &-c{
+            display: flex;
+            flex-direction: column;
+
+            @include respond(phone){
+                min-width: 40%;
+                margin: 1rem 0;
+            }
+
+            & a{
+                font-size: 1.5rem;
+                font-family: $primary-font;
+                color: white;
+
+                &:hover{
+                    color: $color-secondary;
+                }
+
+                @include respond(phone){
+                    font-size: 1.6rem;
+                }
+
+            }
+
+            //Social Links
+            &-sl{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items:flex-end;
+
+                @include respond(phone){
+                    justify-content: center;
+                }
+
+                & li{
+                    font-size: 2rem;
+                    color: white;
+                    height: 4rem;
+                    width: 4rem;
+                    padding: 1.6rem;
+                    background-color: $color-secondary;
+                    margin: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: all 0.3s;
+
+                    & a{
+                        color: white;
+                        padding: 1rem;
+                        
+                        &:hover{
+                            color: $color-secondary;
+                           
+                        }
+                    }
+
+                    &:hover{
+                        color: $color-secondary;
+                        background-color: white;
+                    }
+                }
+            }
+
+            & h5{
+                font-size: 2.2rem;
+                color:white;
+                font-family: $primary-font;
+                position: relative;
+                margin-bottom: 2rem;
+
+                @include respond(phone){
+                    margin-top: 2rem;
+                    text-align: start;
+                }
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 40%;
+                    height: 3px;
+                    width: 6rem;
+                    background-color: red;
+                    border-radius: 10px;
+
+                    @include respond(tab){
+                        right: 70%;
+                        left: 0;
+                        width: auto;
+                    }
+                }
+            }
+
+            &-gl{
+                list-style: none;
+
+                & li{
+                    font-size: 1.6rem;
+                    padding: 0.4rem 0.4rem;
+                    font-family: $primary-font;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    color: white;
+
+                    & a{
+                        color: white;
+
+
+                        &:hover{
+                            color: $color-secondary;
+                        }
+                    }
+                    
+                    
+                }
+            }
+        }
+
+        //About Coaching Detail
+        &-acd{
+            width: 50%;
+
+            @include respond(phone){
+                width: 100%;
+            }
+
+            & .acd{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                & h2{
+                    font-size: 3.8rem;
+                    font-family: $primary-font;
+                    font-weight: 500;
+                    color: white;
+                }
+
+                &__l{
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                    font-size: 1.6rem;
+
+                    & a{
+                        font-size: 1.6rem;
+                        font-family: $primary-font;
+                        color: white;
+                    }
+                }
+
+                & .mail{
+                    font-size: 1.4rem;
+                    font-family: $primary-font;
+                    color: white;
+                    margin: 0.4rem 0;
+                }
+            }
+        }
+    }
+
+    &__b{
+        height: 5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 8rem;
+        background-color: rgba(0,0,0,0.1);
+
+        @include respond(phone){
+            height: auto;
+            padding: 0 2rem;
+        }
+
+        & p{
+            width: 100%;
+            font-size: 1.7rem;
+            color: white;
+            font-family: $primary-font;
+            font-weight: 300;
+            text-align: center;
+
+            @include respond(phone){
+                font-size: 1.6rem;
+                padding:1rem 0;
+            }
+        }
+    }
+}

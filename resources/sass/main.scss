@@ -1,0 +1,24 @@
+@import "./abstract/mixin";
+@import "./abstract/variables";
+
+@import "./base/bootstrap";
+@import "./base/style";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/cards";
+@import "./components/comparewidget";
+@import "./components/headerloginpopup";
+@import "./components/dialog";
+
+@import "./screens/home";
+@import "./screens/coachinglist";
+@import "./screens/coaching";
+@import "./screens/blog";
+@import "./screens/coachingregistration";
+@import "./screens/studentlogin";
+@import "./screens/compare";
+@import "./screens/feestructure";
+@import "./screens/enrollnow";
+@import "./screens/studentdash";
+@import "./screens/static";
+@import "./screens/review";

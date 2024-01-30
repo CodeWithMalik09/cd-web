@@ -1,0 +1,133 @@
+.comparewidget{
+    display: none;
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    z-index: 100;
+    // mix-blend-mode:color-burn;
+    
+    &__c{
+        margin-bottom: 0.5rem;
+        margin-right: 0.5rem;
+        height: 4.8rem;
+        width: 18rem;
+        box-shadow: 0 0 4px rgba(grey, 0.2);
+        border-radius: 3px;
+        background-color: $color-secondary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        & p{
+            font-size: 1.6rem;
+            font-family: $primary-font;
+            color: white;
+        }
+
+        &-count{
+            height: 3rem;
+            width: 3rem;
+            margin-left: 1rem;
+            font-size: 1.6rem;
+            font-family: $primary-font;
+            color: white;
+            background-color: rgba(white, 0.2);
+            border-radius: 3px;
+            text-align: center;
+            line-height: 30px;
+        }
+    }
+
+    &__a:hover~&__ic{
+        height: 26rem;
+        width: auto;
+        opacity: 1;
+        // padding: 1rem;
+    }
+
+    
+
+    &__ic{
+        position: absolute;
+        bottom: 0rem;
+        right: 0rem;
+        height: 26rem;
+        width: 0;
+        opacity: 0;
+        background-color: white;
+        box-shadow: 0 0 4px rgba(grey, 0.5);
+        z-index: -1;
+        border-radius: 3px;
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: flex-start;
+
+        &:hover{
+            opacity: 1;
+            width: auto;
+        }
+
+        & .remove{
+            position: absolute;
+            font-size: 1.6rem;
+            font-family: $primary-font;
+            padding: 1rem 2rem;
+            color: $color-primary;
+            bottom: 0.5rem;
+            left: 0.5rem;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        &-cc{
+            height: calc(100% - 2.3rem );
+            display: flex;
+
+            & .cwcoaching{
+                padding: 0.6rem;
+                width: 19rem;
+                height: calc(100% - 3.8rem);
+                min-height: calc(100% - 3.8rem);
+                max-height: calc(100% - 3.8rem);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 1px solid rgba(grey, 0.2);
+                position: relative;
+                overflow: hidden;
+
+                & img{
+                    width: 100%;
+                    height: 80%;
+                    object-fit: contain;
+                }
+
+                & p{
+                    margin-top: 0.6rem;
+                    font-size: 1.6rem;
+                    text-align: center;
+                    font-family: $primary-font;
+                }
+
+                &:hover span{
+                    background-color: white;
+                }
+
+                & span{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    padding: 1rem;
+                    cursor: pointer;
+
+                    & i{
+                        font-size: 2.4rem;
+                    }
+                }
+            }
+        }
+    }
+}

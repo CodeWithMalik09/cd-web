@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(gray, 0.1);
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+
+    @include respond(desktop) {
+        font-size: 62.5%;
+    }
+
+    @include respond(tab) {
+        font-size: 56%;
+    }
+
+    @include respond(phone) {
+        font-size: 62.5%;
+    }
+
+    @include respond(smphone) {
+        font-size: 48%;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    padding: 0.8rem 2rem;
+    background-color: $color-primary;
+    font-size: 1.5rem;
+    font-family: $primary-font;
+    color: white;
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-radius: 3px;
+
+    &:hover {
+        background-color: $color-secondary;
+    }
+}
+
+
+::selection {
+    user-select: none;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(#ff6600, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(#ff6600, 0.8);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff6600;
+}
+
+
+
+//Select2 Plugin Additional CSS
+.select2__options {
+    font-size: 1.6rem !important;
+    font-family: $primary-font;
+}
+
+.select2-dropdown--below,.select2-dropdown--above {
+    border: 1px solid rbga($color-secondary,0.1) !important;
+    border-radius: 0 !important;
+}
+
+.select2-search__field:focus{
+    outline: none !important;
+}

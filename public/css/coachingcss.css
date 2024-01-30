@@ -1,0 +1,267 @@
+.video-container {
+    max-width: 560px;
+    margin: 0 auto;
+     margin-left: -5px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 315px;
+
+}
+#local{
+
+    color: black;
+    font-weight: bold;
+    font-family:nunito;
+    font-size:15px;
+}
+
+#enow{
+    background-color: #253f94;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-family: nunito;
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+}
+
+#enow:hover{
+    background-color: #f60;
+}
+
+.enroll__now-cls{
+    margin-top:12px;
+}
+
+@media (max-width:480px){
+    #enow{
+        background-color: #253f94;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        font-family: nunito;
+        color: white;
+        font-size: 12px;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .ch__c-mc-r h2 {
+        font-size: 2.0rem;
+    }
+
+    .enroll__now-cls{
+        margin-top:5px;
+    }
+}
+
+.gallery {
+display: flex;
+flex-wrap: wrap;
+}
+
+.gallery img {
+width: 200px; /* Set your desired image width */
+margin: 10px;
+transition: transform 0.3s;
+}
+
+.gallery img:hover {
+transform: scale(1.2); /* Increase the scale factor for zoom effect */
+}
+
+/*for address*/
+.address{
+    width:100%;
+}
+.address h3,
+    p {
+        padding: 4px 6px;
+    }
+
+    .address h3 {
+        font-size: 22px;
+        font-family: nunito;
+    }
+
+    .address p {
+        font-family: nunito;
+        font-size: 18px;
+    }
+
+/*working hours*/
+    #wh {
+        font-family: nunito;
+        font-size: 16px;
+    }
+
+
+    .workinghours {
+        padding: 4px 6px;
+    }
+
+    .workinghours h3 {
+        font-size: 22px;
+        font-family: nunito;
+    }
+
+    .workinghours p {
+        font-size: 18px;
+        font-family: nunito;
+    }
+
+  /*discount*/
+  .off{
+
+        text-align: center;
+        display: flex;
+        width:350px;
+    }
+
+/*for number popup*/
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width:350px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+/*for similar coachings*/
+    .gallerys {
+        margin: 4px;
+        border:2px solid lightgray;
+       border-radius:5px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+
+    }
+
+/*for Information*/
+.sc {
+        border: none;
+        border-bottom: 2px solid lightgray;
+        border-left: 2px solid lightgray;
+        margin-top: 15px;
+        border-radius: 8px;
+
+    }
+.custom-container {
+
+        font-size: 1.6rem;
+        font-family: 'Nunito', sans-serif;
+    }
+    .custom-container .row{
+        margin-bottom:10px;
+    }
+/*other courses button*/
+    .popup-menu {
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 999;
+    }
+
+    .popup-menu button {
+        margin-right: 10px;
+    }
+/*for other courses hover*/
+.other{
+color:#2873F0;
+}
+/*discount*/
+.dflex{
+display: flex;
+width: 100%;
+margin-left: -7px;
+}
+
+#en a{
+font-size: 16px;
+font-weight: normal;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+border-radius: 5px;
+}
+#disc{
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+text-align:center;
+background-color:green;
+border-radius: 5px;
+font-size:16px;
+color:white;
+}
+/*heading text*/ 
+.heading-container {
+    text-align: center;
+    padding:25px 100px;
+    background: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    color: #fff;
+    display: inline-block;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    position: relative;
+    top: 40px;
+    font-family:nunito;
+    
+}
+.paracontainer{
+    text-align: center;
+    
+   
+    color: #fff;
+   
+   top:55px;
+    position: relative;
+    
+    font-family:nunito;
+}
+.paracontainer p{
+    font-size:3rem;
+    word-spacing:10px;
+    letter-spacing: 6px;
+}
+
+
+h1 {
+    font-size: 2.6em;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .heading-container {
+        padding: 14px 10px;
+        border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+        margin:4px;
+    }
+    .paracontainer p{
+      font-size:1.5rem;
+      letter-spacing:4px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    
+}

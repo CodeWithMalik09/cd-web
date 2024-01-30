@@ -1,0 +1,340 @@
+.blog{
+    width: 100%;
+    height: auto;
+
+    &__c{
+        padding: 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include respond(phone){
+            padding: 1rem;
+        }
+
+        &-bcc{
+            display: flex;
+            flex-wrap: wrap;
+            // justify-content: space-around;
+        }
+
+        &-pag{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+
+            & p,a{
+                font-size: 1.6rem;
+                font-family: $primary-font;
+                padding: 0.1rem 0.8rem;
+                // background-color: $color-primary;
+                color: black;
+                margin: 0 0.8rem;
+            }
+
+            & .active-page{
+                background-color: $color-primary;
+                color: white;
+            }
+
+            & a{
+                padding: 0.1 2.4rem;
+                text-decoration: none;
+                color: black;
+
+                span{
+                    font-size: 2.4rem;
+                }
+            } 
+            
+        }
+    }
+}
+
+//Blogcard
+
+.blogcard{
+    width: calc((100% - 7rem) / 3 );
+    height: auto;
+    margin: 10px;
+    background-color: white;
+    transition: all 0.3s linear;
+    border: 1px solid rgba(0,0,0,0.1);
+
+    @include respond(phone){
+        width: 90%;
+    }
+
+    &:hover{
+        box-shadow: 4px 4px 20px rgba(0,0,0,0.1);
+    }
+
+    &__c{
+        display: flex;
+        flex-direction: column;
+
+        & img{
+            width: 100%;
+            object-fit: cover;
+        }
+
+        & h4{
+            padding: 0 0.6rem;
+            font-size: 2rem;
+            font-family: $primary-font;
+        }
+
+        &-bd{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0.6rem 0.8rem;
+
+            & img{
+                height: 4rem;
+                width: 4rem;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            & p{
+                font-size: 1.6rem;
+                font-family: $primary-font;
+                margin-left: 0.6rem;
+
+                &:last-child{
+                    margin-left: auto;
+                }
+            }
+        }
+
+        &-ec{
+            padding: 0 0.9rem;
+            padding-bottom: 1.4rem;
+
+            & p{
+                // padding: rem;
+                font-size: 1.6rem;
+                font-family: $primary-font;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 4;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+
+//BlogView
+.blogview{
+    width: 100%;
+
+    &__c{
+        padding: 6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @include respond(phone){
+            padding: 1.4rem;
+            flex-direction: column;
+        }
+
+        &-l{
+            width: calc(100% - 40rem);
+            background-color:white;
+            height: auto;
+
+            @include respond(phone){
+                width: 100%;
+            }
+
+            & .bv{
+                & img{
+                    // height: 42rem;
+                    height: auto;
+                    width: 100%;
+                    object-fit: cover;
+
+                    @include respond(phone){
+                        height: auto;
+                    }
+                }
+
+                &__cc{
+                    padding: 1rem;
+                    width: 100%;
+
+                    & h2{
+                        font-size: 2.4rem;
+                        font-family: $primary-font;
+                    }
+
+                    &-bd{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        padding: 0.6rem 0.4rem;
+            
+                        & img{
+                            height: 4rem;
+                            width: 4rem;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+            
+                        & p{
+                            font-size: 1.6rem;
+                            font-family: $primary-font;
+                            margin-left: 0.6rem;
+            
+                            &:last-child{
+                                margin-left: auto;
+                            }
+                        }
+
+
+                    }
+
+                    & article{
+                        font-size: 1.6rem;
+                        font-family: $primary-font;
+                        display: block;
+                        overflow-x: hidden;
+                        width: 100%;
+
+                        & div{
+                            width: 100%;
+                            flex: 1;
+                            overflow-x: auto;
+                        }
+
+                    }
+                }
+
+                & .share-btn{
+                    width: 100%;
+                    text-align: center;
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.6rem;
+                    font-family: $primary-font;
+                    background-color: rgba(0,0,0,0.1);
+                    height: 56px;
+                    margin-top: 16px;
+                    border-radius: 120px;
+
+                    & .text{
+                        display: block;
+                    }
+
+                    @include respond(phone){
+                        flex-wrap: wrap;
+                        border-radius: 20px;
+                    }
+
+                    & a{
+                        background-color: $color-primary;
+                        color: white;
+                        border-radius: 60px;
+                        padding: 10px 10px;
+                        margin: 0 10px;
+                        white-space: nowrap;
+                        text-align: center;
+                        // display: inline-block;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        @include respond(phone){
+                            height: 36px;
+                            width: 36px;
+                        }
+                        
+
+                        & span{
+                            margin-left: 10px;
+
+                            @include respond(phone){
+                                display: none;
+                            }
+                        }
+
+                        &:hover{
+                            background-color: $color-secondary;
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+        &-r{
+            width: 36rem;
+            background-color: white;
+            height: 100%;
+
+            @include respond(phone){
+                margin-top: 2rem;
+                width: 100%;
+            }
+
+            & .brc{
+                
+                h5{
+                    font-size: 2.4rem;
+                    font-family: $primary-font;
+                    padding: 0.6rem;
+                    text-align: center;
+                }
+
+                &__rc{
+                    display: flex;
+                    flex-direction: row;
+                    
+                    &:not(:last-child){
+                        margin-bottom: 4px;
+                    }
+
+                    & img{
+                        width: 12rem;
+                        height: 8rem;
+                    }
+
+                    &-tc{
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0 0.8rem;
+
+                        & h4{
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                            font-family: $primary-font;
+
+                            @include respond(phone){
+                                font-size: 1.7rem;
+                            }
+                        }
+
+                        & p{
+                            font-size: 1rem;
+                            font-family: $primary-font;
+
+                            @include respond(phone){
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

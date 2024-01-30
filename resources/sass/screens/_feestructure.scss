@@ -1,0 +1,68 @@
+.feestructure{
+    &__c{
+        padding: 8rem;
+
+        @include respond(phone){
+            padding: 2rem;
+        }
+
+        &-table{
+            overflow-x: auto;
+        }
+
+        & table{
+            width: 100%;
+            border: 2px solid grey;
+            overflow-x: auto;
+
+            & thead{
+                background-color: rgba(grey,0.3);
+                
+                & th{
+                    font-size: 1.6rem;
+                    font-family: $primary-font;
+                    font-weight: 400;
+                    padding: 0.6rem 1rem;
+                }
+            }
+
+            & tbody{
+
+                & tr{
+
+                    & td{
+                        padding: 0.6rem 1.4rem;
+                        font-size: 1.4rem;
+                        font-family: $primary-font;
+
+                        &:not(:nth-child(2)){
+                            text-align: center;
+                        }
+
+                        &:last-child{
+                            display: flex;
+                            justify-content: center;
+                            text-align: center;
+                        }
+
+                        & a{
+                            padding: 0.6rem;
+                            color: white;
+                            display: flex;
+                            margin: 1px;
+
+                            &:first-child{
+                                background-color: blue;
+                            }
+
+                            &:last-child{
+                                background-color: red;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

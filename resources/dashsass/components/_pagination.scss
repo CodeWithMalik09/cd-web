@@ -1,0 +1,35 @@
+.pagination{
+    height: 36px;
+    width: auto;
+    margin-top: 4px;
+    // background-color: yellow;
+
+    &__c{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        line-height: 1;
+
+        &-c{
+            height: 34px;
+            width: 34px;
+            border: 1px solid rgba($color-primary,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & p{
+                font-size: 18px;
+                font-family: $font-primary;
+            }
+        }
+
+
+        & .material-icons{
+            border: 1px solid rgba($color-primary,0.1);
+            padding: 4px;
+        }
+    }
+}

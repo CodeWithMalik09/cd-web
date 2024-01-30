@@ -1,0 +1,875 @@
+.ch {
+    height: auto;
+    width: 100%;
+    
+    &__c {
+        
+        &-title {
+            position: relative;
+            width: 100%;
+            height: 40vh;
+
+            @include respond(phone) {
+                height: 28vh;
+            }
+
+            &-heading {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                font-size: 4.8rem;
+                font-family: $primary-font;
+                white-space: nowrap;
+                color: white;
+                padding: 0rem 6rem;
+                border-top-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+                background: #FF512F;
+                max-width: 80%;
+                overflow-x: hidden;
+                text-overflow: ellipsis;
+                // background: -webkit-linear-gradient(to right, #F09819, #FF512F);
+                background: linear-gradient(to right, #F09819, #FF512F);
+
+                @include respond(phone) {
+                    white-space: pre-wrap;
+                    font-size: 2.8rem;
+                    padding: 1rem 4rem;
+                }
+            }
+
+            &-i {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+            }
+        }
+
+        &-b {
+            padding: 1.4rem 6rem;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+
+            @include respond(tab) {
+                padding: 1.4rem 1.4rem;
+            }
+
+            & i {
+                margin: 0 1rem;
+            }
+
+            & p {
+                font-size: 1.6rem;
+                font-family: $primary-font;
+            }
+        }
+
+        &-f {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 1.8rem 6rem;
+            background-color: white;
+
+            @include respond(tab) {
+                padding: 1rem 1.4rem;
+            }
+
+
+            & .form {
+                flex: 1;
+                display: flex;
+
+                & form {
+                    display: flex;
+                    justify-content: center;
+                    flex: 1;
+
+                    & select {
+                        margin: 0 0.6rem;
+                        padding: 0.6rem 1.4rem;
+                        border: none;
+                        background-color: rgba($color-secondary, 0.05);
+                        font-size: 1.6rem;
+                        font-family: $primary-font;
+                        width: calc((100% - 12rem) / 4);
+
+                        @include respond(tab) {
+                            width: calc((100% - 2.8rem) / 4);
+                        }
+
+                    }
+
+                    & button {
+                        width: calc((100% - 12rem) / 4);
+
+                        @include respond(tab) {
+                            width: calc((100% - 2.8rem) / 4);
+                        }
+                    }
+                }
+            }
+
+            &-d {
+                margin-right: 2rem;
+                width: 26%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                border: 1px solid gray;
+                padding: 0.6rem 2rem;
+                border-radius: 3px;
+
+                & p {
+                    font-size: 1.6rem;
+                    font-family: $primary-font;
+                }
+            }
+
+            &-btn {
+                padding: 0.6rem 2rem;
+                background-color: $color-secondary;
+                font-family: $primary-font;
+                font-size: 1.6rem;
+                border: none;
+                color: white;
+            }
+        }
+
+        //Main Container
+        &-mc {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: row;
+            padding: 1rem 4rem;
+            background-color: white;
+
+            @include respond(phone) {
+                padding: 1rem 1.4rem;
+                flex-direction: column;
+            }
+
+            &-l {
+                position: sticky;
+                top: 8rem;
+                height: 100%;
+                width: 25vw;
+                box-shadow: 0 0 4px rgba(gray, 0.4);
+                // border-radius: 3px;
+                margin-right: 2rem;
+
+                @include respond(phone) {
+                    top: 0;
+                    height: auto;
+                    width: 100%;
+                    box-shadow: none;
+                    margin-bottom: 1rem;
+                    margin-right: 0;
+                    position: relative;
+                }
+
+                & .wishlist{
+                    position: absolute;
+                    right: 1rem;
+                    top: 1rem;
+                    padding: 1.2rem;
+                    box-shadow: 4px 4px 10px rgba(gray, 0.4);
+                    border-radius: 60px;
+                    background-color: white;
+                    cursor: pointer;
+                    border: 1px solid rgba($color-primary, 0.4);
+
+                    & i{
+                        font-size: 2.4rem;
+                    }
+                }
+
+                & .logo {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+
+                    & img {
+                        width: 70%;
+                        object-fit: contain;
+
+                        @include respond(phone) {
+                            width: 70%;
+                        }
+                    }
+                }
+
+                & .gallery {
+                    width: 100%;
+                    display: flex;
+                    // align-items: center;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+
+                    & img {
+                        width: 47%;
+                        height: 12rem;
+                        margin: 3px;
+                        object-fit: cover;
+                        cursor: pointer;
+                    }
+                }
+
+                & .extra {
+                    display: flex;
+                    margin: 5px;
+
+                    & a {
+                        flex: 1;
+                        padding: 1rem 2rem;
+                        text-align: center;
+                        font-size: 1.6rem;
+                        font-family: $primary-font;
+                        color: white;
+
+                        &:first-child {
+                            background-color: $color-primary;
+                        }
+
+                        &:last-child {
+                            background-color: $color-secondary;
+                        }
+                    }
+                }
+
+            }
+
+            &-r {
+                height: auto;
+                width: calc(100vw - 31vw);
+
+                @include respond(phone) {
+                    width: 100%;
+                }
+
+                & .mrow {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    & .share-btn {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        cursor: pointer;
+                        margin-left: 2rem;
+                        position: relative;
+
+                        & span {
+                            font-size: 1.4rem;
+                            font-family: $primary-font;
+                            color: gray;
+                        }
+
+                        &:hover .share-container {
+                            height: 9rem;
+                            border: 1px solid rgba($color-primary, 0.4);
+                            padding: 2rem;
+                        }
+
+                        & .share-container {
+                            position: absolute;
+                            top: 105%;
+                            right: -10px;
+                            height: 0px;
+                            box-shadow: 4px 4px 10px rgba(gray, 0.2);
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            overflow: hidden;
+                            transition: all 0.1s linear;
+                            background-color: white;
+
+                            @include respond(phone){
+                                right: 0;
+                            }
+
+                            & a {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                margin: 0 1rem;
+                            }
+                        }
+                    }
+
+                    & i {
+                        font-size: 3.2rem;
+                    }
+                }
+
+                & h2 {
+                    font-size: 2.4rem;
+                    font-family: $primary-font;
+                    color: $color-primary;
+
+                    @include respond(phone) {
+                        font-size: 2.6rem;
+                    }
+                }
+
+                & .rc {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-top: 0.8rem;
+
+                    &__p {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        background-color: $color-secondary;
+                        padding: 0.4rem 0.6rem;
+                        color: white;
+                        border-radius: 5px;
+
+                        & i {
+                            font-size: 1.6rem;
+                        }
+
+                        & p {
+                            margin-left: 0.4rem;
+                            font-size: 1.6rem;
+                            font-family: $primary-font;
+                        }
+                    }
+
+                    &__t {
+                        margin-left: 1rem;
+                        font-size: 1.6rem;
+                        font-family: $primary-font;
+                    }
+                }
+
+                & .dc {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin: 0.6rem 0;
+                    font-weight: 500;
+
+                    & i {
+                        font-size: 1.6rem;
+                    }
+
+                    & p {
+                        font-size: 1.6rem;
+                        font-family: $primary-font;
+                        margin-left: 0.8rem;
+
+
+                    }
+                }
+
+                //section heading
+                &-sh {
+                    font-size: 1.8rem;
+                    font-family: $primary-font;
+                    margin-top: 4rem;
+                    margin-bottom: 2rem;
+
+                    @include respond(phone) {
+                        font-weight: 500;
+                    }
+                }
+
+                & .tblcon {
+                    width: 100%;
+                    overflow-y: auto;
+                }
+
+                & table {
+                    width: 100%;
+                    border: 2px solid grey;
+
+                    & thead {
+                        background-color: rgba(grey, 0.3);
+
+                        & th {
+                            font-size: 1.5rem;
+                            font-family: $primary-font;
+                            font-weight: 400;
+                            padding: 0.6rem 1rem;
+                        }
+                    }
+
+                    & tbody {
+
+                        & tr {
+
+                            & td {
+                                padding: 0.6rem 1.4rem;
+                                font-size: 1.4rem;
+                                font-family: $primary-font;
+
+                                &:not(:nth-child(2)) {
+                                    text-align: center;
+                                }
+
+                                &:last-child {
+                                    display: flex;
+                                    justify-content: center;
+                                    text-align: center;
+                                }
+
+                                & a {
+                                    padding: 0.6rem;
+                                    color: white;
+                                    display: flex;
+                                    margin: 1px;
+
+                                    &:first-child {
+                                        background-color: blue;
+                                    }
+
+                                    &:last-child {
+                                        background-color: red;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+                & .viewmore {
+                    font-family: $primary-font;
+                    font-size: 16px;
+                    color: white;
+                    display: block;
+                    padding: 0.6rem 2rem;
+                    cursor: pointer;
+                    background-color: rgba($color-primary, 1);
+                    position: relative;
+                    float: right;
+                }
+
+                &-if {
+                    height: 40rem;
+                    width: 100%;
+                }
+
+                &-p {
+                    font-size: 1.6rem;
+                    font-family: $primary-font;
+                }
+
+                & .review {
+                    display: flex;
+                    flex-direction: column;
+                    box-shadow: 0 0 4px rgba(gray, 0.2);
+                    padding: 3.6rem;
+
+                    @include respond(phone) {
+                        padding: 1.6rem;
+                    }
+
+                    &__count {
+                        display: flex;
+                        justify-content: space-between;
+
+                        @include respond(phone) {
+                            flex-direction: column;
+                        }
+
+
+                        &-l {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                            align-items: center;
+                        }
+
+                        &-r {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            @include respond(phone) {
+                                margin: 1rem 0;
+                            }
+                        }
+
+                        &-ar {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            & h3 {
+                                font-size: 2.8rem;
+                                font-family: $primary-font;
+                            }
+
+                            & p {
+                                font-size: 1.6rem;
+                                font-family: $primary-font;
+                                white-space: nowrap;
+                            }
+
+                        }
+
+                        &-rb {
+                            display: flex;
+                            flex-direction: column;
+
+                            &-i {
+                                display: flex;
+                                align-items: center;
+                                font-size: 1.6rem;
+                                font-family: $primary-font;
+                                white-space: nowrap;
+                                margin: 0.4rem 0;
+
+                                & i {
+                                    margin: auto 0.6rem;
+                                }
+
+                                & p {
+                                    width: 1rem;
+                                    text-align: center;
+                                }
+
+                                & .bar {
+                                    display: inline;
+                                    width: 18rem;
+                                    height: 0.6rem;
+                                    border-radius: 5px;
+                                    background-color: rgba(gray, 0.4);
+                                    margin-right: 0.6rem;
+
+                                    @include respond(phone) {
+                                        width: 18rem;
+                                    }
+
+                                    & div {
+                                        background: green;
+                                        height: 100%;
+                                        border-radius: 5px;
+                                    }
+                                }
+                            }
+                        }
+
+                        &-avgitem {
+                            display: flex;
+                            align-items: center;
+
+                            &-i {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                margin: 1rem;
+
+                                & .txt {
+                                    font-size: 1.6rem;
+                                    font-family: $primary-font;
+                                    margin-top: 1rem;
+                                }
+
+                                & .pie {
+                                    height: 8rem;
+                                    width: 8rem;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+
+                                    & .abovepie {
+                                        height: 90%;
+                                        width: 90%;
+                                        border-radius: 50%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        background-color: white;
+
+                                        & p {
+                                            font-size: 2.4rem;
+                                            font-family: $primary-font;
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+
+                    &__review {
+                        display: flex;
+                        flex-direction: column;
+
+                        &-i {
+                            display: flex;
+                            flex-direction: column;
+                            border-bottom: 1px solid rgba(grey, 0.1);
+                            padding-bottom: 1rem;
+                            margin-top: 1rem;
+
+                            & .reviewer {
+                                display: flex;
+                                align-items: center;
+
+                                & .star {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    padding: 0.2rem 0.4rem;
+                                    background-color: green;
+                                    font-size: 1.6rem;
+                                    font-family: $primary-font;
+                                    border-radius: 5px;
+                                    color: white;
+
+                                    & i {
+                                        margin-left: 0.6rem;
+                                    }
+                                }
+
+                                & p {
+                                    font-size: 1.6rem;
+                                    font-family: $primary-font;
+                                    margin-left: 1rem;
+                                }
+                            }
+
+                            & .rtxt {
+                                font-size: 1.6rem;
+                                font-family: $primary-font;
+                                margin: 0.4rem 0;
+                            }
+
+                            & .cred {
+                                display: flex;
+                                align-items: center;
+                                font-size: 1.6rem;
+                                font-family: $primary-font;
+                                color: grey;
+
+                                & i {
+                                    margin-left: 0.6rem;
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+                &-cc {
+                    width: 100%;
+                    padding: 3rem;
+                    box-shadow: 0 0 4px rgba(grey, 0.4);
+
+                    & .cp {
+                        & p {
+                            font-size: 1.6rem;
+                            font-family: $primary-font
+                        }
+
+                        & p:first-child {
+                            color: grey;
+                        }
+                    }
+
+                    & .ca {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 1rem;
+
+                        & .address {
+                            width: 46%;
+
+                            & p {
+                                font-size: 1.6rem;
+                                font-family: $primary-font;
+                            }
+
+                            & p:first-child {
+                                color: grey;
+                            }
+
+                            & a {
+                                font-size: 1.6rem;
+                                font-family: $primary-font;
+                            }
+                        }
+
+                        & .wh {
+                            width: 50%;
+
+                            & p {
+                                font-size: 1.6rem;
+                                font-family: $primary-font;
+                            }
+
+                            & p:first-child {
+                                color: grey;
+                            }
+                        }
+
+                    }
+
+                    & .od {
+                        display: flex;
+                        margin-top: 1rem;
+
+                        & .em {
+                            width: 50%;
+
+                            & .material-icons {
+                                padding: 0.8rem;
+                                border-radius: 50%;
+                                border: 1px solid rgba(grey, 1);
+                                margin-top: 0.6rem;
+
+                                @include respond(phone) {
+                                    font-size: 2.2rem !important;
+                                }
+                            }
+
+                            & p {
+                                font-size: 1.6rem;
+                                font-family: $primary-font;
+                            }
+
+                            & p:first-child {
+                                color: grey;
+                            }
+                        }
+
+                        & .links {
+                            & p {
+                                font-size: 1.6rem;
+                                font-family: $primary-font;
+                            }
+
+                            & p:first-child {
+                                color: grey;
+                            }
+
+                            & .lc {
+                                display: flex;
+
+                                & a {
+                                    font-size: 2rem;
+                                    margin: 0.6rem;
+                                    border: 1px solid grey;
+                                    width: 4rem;
+                                    height: 4rem;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.imgcarousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    &__close {
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        font-size: 3.2rem;
+        font-family: $primary-font;
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+        height: 5rem;
+        width: 5rem;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+
+        @include respond(phone) {
+            line-height: 20px;
+        }
+    }
+
+    &__next,
+    &__prev {
+        position: fixed;
+        top: 50%;
+        // transform: translateY(-50%);
+        font-size: 2.2rem;
+        padding: 10px;
+        border-radius: 50%;
+        height: 5rem;
+        width: 5rem;
+        text-align: center;
+        cursor: pointer;
+        background-color: white;
+        // font-family: $primary-font;
+
+        & i {
+            margin-top: 5px;
+
+            @include respond(phone) {
+                margin-top: 1px;
+            }
+        }
+
+    }
+
+    &__prev {
+        left: 6rem;
+
+        @include respond(phone) {
+            left: 3rem;
+        }
+    }
+
+    &__next {
+        right: 6rem;
+
+        @include respond(phone) {
+            right: 3rem;
+        }
+    }
+
+    &__c {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-img {
+            height: 70%;
+            width: 80%;
+            object-fit: contain;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.dhome{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+
+    &__c{
+        padding: 16px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        
+        & h2{
+            font-size: 24px;
+            font-family: $font-primary;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        
+        & .cardcontainer{
+            width: 100%;
+            display: flex;
+            // justify-content: center;
+            flex-wrap: wrap;
+            overflow-y: auto;
+            // height:100%;
+        }
+
+        & .dhc{
+            margin: 16px;
+            height: 160px;
+            width: calc(100% / 3 - 40px);
+            // box-shadow: 0 0 2px rgba(grey,0.2);
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s;
+            border: 1px solid rgba(grey,0.4);
+            border-radius: 10px;
+
+            &:hover{
+                box-shadow: 0 4px 20px rgba(grey,0.2);
+            }
+
+            &__c{
+                padding: 14px;
+                display: flex;
+                flex-direction: column;
+                border-radius: 10px;
+
+                & h4{
+                    font-size: 24px;
+                    font-family: $font-primary;
+                    font-weight: 400;
+                }
+
+                & p{
+                    font-size: 16px;
+                    font-family: $font-primary;
+                }
+
+                & .count{
+                    position: absolute !important;
+                    bottom: 0rem;
+                    font-size: 34px;
+                    font-family: $font-primary;
+                    color: $color-secondary;
+                }
+            }
+
+            & .st{
+                position: absolute;
+                right: -40px;
+                bottom: -40px;
+                background-color: $color-primary;
+                height: 120px;
+                width: 120px;
+                border-radius: 50%;
+            }
+        }
+    }
+}

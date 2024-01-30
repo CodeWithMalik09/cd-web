@@ -1,0 +1,63 @@
+.wr{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__c{
+        padding: 6rem 1rem;
+        width: 50%;
+
+
+        & form{
+            display: flex;
+            flex-direction: column;
+
+            & .ff{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1.4rem;
+                
+
+                & label {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    font-family: $primary-font;
+                    margin-bottom: 0.4rem;
+                }
+
+                & textarea{
+                    padding: 1rem;
+                    font-family: $primary-font;
+                    border: 1px solid rgba($color-primary,0.1);
+                    resize: vertical;
+
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+
+            & .fr{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1.4rem;
+                background-color: white;
+                padding: 1rem 2rem;
+                
+
+                & label {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    font-family: $primary-font;
+                }
+            }
+
+            & button{
+                align-self: center;
+            }
+        }
+    }
+}
+

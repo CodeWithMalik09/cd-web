@@ -1,0 +1,160 @@
+.stulogin{
+    background-color: #ebebeb;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+
+    &__c{
+        padding: 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include respond(phone){
+            padding: 3rem;
+        }
+
+        & .form{
+            width: 36vw;
+            background-color: white;
+
+            @include respond(phone){
+                width: 90vw;
+            }
+
+            &__type{
+                display: flex;
+                align-items: center;
+                width: 100%;
+
+                & h4{
+                    width: 50%;
+                    font-size: 2.4rem;
+                    font-family: $primary-font;
+                    font-weight: 500;
+                    text-align: center;
+                    padding: 1rem;
+                    cursor: pointer;
+
+                    &:first-child{
+                        background-color: $color-primary;
+                        color: white;
+                    }
+                }
+            }
+
+            & .login,.registration{
+                padding: 4rem;
+                border-top: 1px solid rgba(grey,0.2);
+                display: flex;
+                flex-direction: column;
+
+                & .error{
+                    font-size: 1.5rem;
+                    font-family: $primary-font;
+                    color: red;
+                    text-align: center;
+                }
+
+                & img{
+                    height: 12rem;
+                    width: 12rem;
+                    align-self: center;
+                    border-radius: 50%;
+                }
+
+                & .fi{
+                    display: flex;
+                    flex-direction: column;
+
+                    &:not(:first-child){
+                        margin-top: 1rem;
+                    }
+                    
+                    & label{
+                        font-size: 1.6rem;
+                        font-family: $primary-font;
+                    }
+
+                    & .phonein{
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid rgba($color-secondary,0.4);
+                        background-color: rgba($color-secondary,0.05);
+                        font-size: 1.4rem;
+                        font-family: $primary-font;
+
+                        & span{
+                            cursor: pointer;
+                            background-color: $color-secondary;
+                            padding: 1rem 1rem;
+                            color: white;
+
+                            &:active{
+                                background-color: rgba($color-secondary,0.6);
+                            }
+                        }
+
+                        & input{
+                            flex:1;
+                            border: none;
+                            padding-left: 1rem;
+                            background-color: transparent;
+                            font-family: $primary-font;
+
+                            &:focus{
+                                outline: none;
+                            }
+                        }
+
+                    }
+
+                    & #otp{
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid rgba($color-secondary,0.4);
+                        background-color: rgba($color-secondary,0.05);
+                        font-size: 1.4rem;
+                        font-family: $primary-font;
+                        padding: 1rem 2rem;
+
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+
+                    & p{
+                        font-size: 1.4rem;
+                        color: green;
+                        font-family: $primary-font;
+                    }
+
+                    & .if{
+                        padding: 1rem 1rem;
+                        border: 1px solid rgba($color-secondary,0.4);
+                        background-color: rgba($color-secondary,0.05);
+                        font-size: 1.4rem;
+                        font-family: $primary-font;
+
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                }
+
+                &__btn{
+                    align-self: center;
+                    margin-top: 2rem;
+                }
+
+                &__forget{
+                    margin-top: 1rem;
+                    align-self: center;
+                    font-size: 1.6rem;
+                    font-family: $primary-font;
+                }
+            }
+        }
+    }
+}

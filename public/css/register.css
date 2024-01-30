@@ -1,0 +1,123 @@
+/*  achiements*/
+        /* Common CSS for tables */
+        .custom-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0;
+        }
+
+        .custom-table, .custom-table th, .custom-table td {
+            border: 1px solid #ccc;
+        }
+
+        .custom-table th, .custom-table td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* CSS for the plus icon with a unique class */
+        .add-row-button {
+            cursor: pointer;
+            color: blue;
+        }
+
+        .remove-row-button {
+            cursor: pointer;
+            color: red;
+        }
+        #achieve {
+            overflow-x: auto;
+        }
+        #result {
+            overflow-x: auto;
+        }
+        #faculty {
+            overflow-x: auto;
+        }
+        #fee {
+            overflow-x: auto;
+        }
+     /* Add a media query for smaller screens */
+
+
+
+
+/*Course*/
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor:pointer;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-size: 18px;
+    color:gray;
+    font-family: sans-serif;
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    height: 44px;
+    padding: 5px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.checkbox-label {
+        display: inline-flex;
+
+        margin-right: 20px;
+
+         /* Adjust the spacing between checkboxes */
+    }
+    .checkbox-label input{
+        height: 15px;
+        width: 18px;
+
+    }
+
+
+
+
+
+/*working hours*/
+        /* Common CSS for tables */
+        #myTable {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0;
+        }
+
+        #myTable, th, td {
+            border: 1px solid #ccc;
+        }
+
+        #myTable th, #myTable td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* CSS for the plus icon with a unique ID */
+        #add-row-button {
+            cursor: pointer;
+            color: blue;
+        }
+
+

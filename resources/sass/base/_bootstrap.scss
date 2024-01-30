@@ -1,0 +1,21 @@
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.cta{
+    background-color: $color-primary;
+    color: white;
+    font-family: $primary-font;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}

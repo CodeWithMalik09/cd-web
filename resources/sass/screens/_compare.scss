@@ -1,0 +1,157 @@
+.compare {
+    height: 100%;
+    width: 100%;
+
+    &__c {
+        padding: 12rem;
+
+        @include respond(phone) {
+            padding: 1rem;
+        }
+
+        & .tblcon {
+            overflow-y: auto;
+        }
+
+        & table {
+            // display: block;
+            width: 100%;
+            overflow-y: auto;
+            margin-top: 2rem;
+            border-collapse: collapse;
+            background-color: white;
+
+            & thead {
+                width: 100% !important;
+
+                & th {
+                    max-width: calc(100% / 4);
+
+                    & p {
+                        padding: 1.4rem;
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        font-family: $primary-font;
+                        text-align: start;
+                        word-wrap: break-word;
+                    }
+
+                    & img {
+                        height: 22rem;
+                        width: 100%;
+                        object-fit: contain;
+                        padding: 1.4rem;
+                        // background-color: white;
+
+                        @include respond(phone) {
+                            height: 8rem;
+                        }
+                    }
+                }
+            }
+
+            & tbody {
+
+                & tr {
+
+
+
+                    & td {
+                        position: relative;
+                        width: calc(100vw / 4);
+                        max-width: calc(100vw / 4);
+                        border: 1px solid rgba(grey, 0.3);
+
+                        &:first-child {
+                            max-width: 24rem;
+                            width: 24rem;
+                            min-width: 24rem;
+
+                            @include respond(phone) {
+                                min-width: 4rem;
+                                width: 12rem;
+                            }
+                        }
+
+                        & p {
+                            padding: 1rem;
+                            font-size: 1.6rem;
+                            font-family: $primary-font;
+                            white-space: normal;
+                            word-break: break-all;
+                            hyphens: auto;
+                            -ms-hyphens: auto;
+                            -moz-hyphens: auto;
+                        }
+
+                        & .btn {
+                            text-transform: uppercase;
+                            color: white !important;
+                            background-color: $color-primary !important;
+                            margin-left: 2rem !important;
+                        }
+
+                        & a {
+                            font-size: 1.6rem;
+                            font-family: $primary-font;
+                            padding: 0.4rem 1.8rem;
+                            color: $color-primary;
+
+
+                            & .material-icons {
+                                font-size: 3.6rem;
+                            }
+
+                            // & .fa{
+                            //     font-size: 3.6rem;
+                            // }
+                        }
+
+                        & .hoverview {
+                            display: none;
+                        }
+
+                        & a:hover~.hoverview {
+                            display: block;
+                            position: absolute;
+                            top: 30%;
+                            left: 40%;
+                            height: 20rem;
+                            width: 20rem;
+                            background-color: red;
+                            border-bottom-right-radius: 1rem;
+                            border-bottom-left-radius: 1rem;
+                            border-top-right-radius: 1rem;
+                            padding: 1rem;
+                            z-index: 10;
+                        }
+
+                        & h4{
+                            font-size: 2rem;
+                            font-weight: 500;
+                            font-family: $primary-font;
+                            text-align: center;
+                        }
+
+                        & .img-container{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            padding: 1.6rem 0;
+                        }
+
+                        & img {
+                            width: 70%;
+                            object-fit: contain;
+                            align-items: center;
+                        }
+
+                    }
+
+
+                }
+            }
+        }
+    }
+}

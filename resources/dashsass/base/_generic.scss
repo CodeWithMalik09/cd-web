@@ -1,0 +1,112 @@
+.form__c {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.form_btn {
+    width: calc(100% - 16px);
+    margin: 8px;
+}
+
+.fi {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 8px;
+    flex: 1;
+
+    & label {
+        font-size: 14px;
+        font-family: $font-primary;
+
+        & span {
+            font-size: 10px;
+            color: gray;
+        }
+    }
+
+    & input,
+    textarea {
+        padding: 8px 8px;
+        border: 1px solid rgba($color-primary, 0.3);
+        border-radius: 3px;
+        resize: vertical;
+    }
+
+    & input:focus,
+    textarea:focus {
+        outline: none;
+    }
+
+}
+
+
+.table__c{
+    overflow-y: auto;
+    width: 100%;
+    height: 86%;
+}
+
+table {
+    width: 100%;
+
+    & thead {
+        background-color: rgba($color-primary, 0.1);
+        border-radius: 3px;
+
+        & th {
+            font-size: 15px;
+            font-family: $font-primary;
+            font-weight: 400;
+            padding: 6px 10px;
+            border-radius: 3px;
+        }
+    }
+
+    & tbody {
+
+        & tr {
+            & td {
+                padding: 6px 14px;
+                font-size: 12px;
+                font-family: $font-primary;
+
+                &:not(:nth-child(2)) {
+                    text-align: start;
+                }
+
+                &:last-child {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                & a {
+                    padding: 6px;
+                    color: white;
+                    display: flex;
+                    margin: 1px;
+                    border-radius: 3px;
+                    background-color: $color-primary;
+                    cursor: pointer;
+
+                    & .material-icons {
+                        font-size: 16px;
+                    }
+
+                    &:first-child {
+                        background-color: blue;
+                    }
+
+                    &:last-child {
+                        background-color: red;
+                    }
+                }
+
+            }
+        }
+    }
+}

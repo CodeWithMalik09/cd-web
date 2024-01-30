@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(gray,0.1);
+    overflow: hidden;
+}
+
+html{
+    // font-size: 62.5%;
+    // @include respond(desktop){
+    //     font-size: 62.5%;
+    // }
+    
+    // @include respond(tab){
+    //     font-size: 56%;
+    // }
+    // @include respond(phone){
+    //     font-size: 52%;
+    // }
+    // @include respond(smphone){
+    //     font-size: 48%;
+    // }
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn{
+    padding: 6px 20px;
+    background-color: $color-primary;
+    font-size: 15px;
+    font-family: $font-primary;
+    color: white;
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-radius: 3px;
+
+    &:hover{
+        background-color: $color-secondary;
+    }
+}
+
+.select2-selection__choice{
+    display: inline-flex !important;
+    padding-left: 0 !important;
+}
+
+.select2-selection__choice__remove{
+    position: relative !important;
+}
+
+.ck-editor__editable {
+    min-height: 200px !important;
+}
+
+a:hover,a:active,a:visited{
+    text-decoration: none !important;
+}
+
+p{
+    margin-bottom: 0 !important;
+}
+
+.dashcontainer{
+    height: calc(100vh - 64px);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    &__mc{
+        width: calc(100% - 240px);
+        height: 100%;
+        padding: 14px;
+    }
+}

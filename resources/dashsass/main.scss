@@ -1,0 +1,19 @@
+@import "./abstract/variables";
+@import "./abstract/mixin";
+
+@import "./components/pagination";
+
+@import "./base/style";
+@import "./base/header";
+@import "./base/footer";
+@import "./base/sidebar";
+@import "./base/generic";
+
+@import "./pages/city";
+@import "./pages/blog";
+@import "./pages/tutor";
+@import "./pages/coaching";
+@import "./pages/login";
+@import "./pages/home";
+@import "./pages/faculty";
+@import "./pages/gallery";

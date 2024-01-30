@@ -1,0 +1,64 @@
+.sidebar{
+    height: 100%;
+    width: 240px;
+    background-color: white;
+    box-shadow: 4px 4px 4px rgba(gray,0.1);
+    overflow-y: auto;
+
+    &__c{
+        height: 100%;
+        // background-color: rgba($color-secondary,0.1);
+
+
+        & .sciul{
+            display: flex;
+            flex-direction: column;
+
+            &__li{
+                min-height: 40px;
+                margin-bottom: 1px;
+                background-color: white;
+                border-bottom: 1px solid rgba(gray,0.1);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                // align-items: center;
+                
+                & a{
+                    min-height: 40px;
+                    display: flex;
+                    padding: 0 20px;
+                    align-items: center;
+                    color: black;
+                    height: 100%;
+                    width: 100%;
+                    cursor: pointer;
+                }
+
+                & p{
+                    margin-left: 10px;
+                    font-size: 14px;
+                    font-family: $font-primary;
+                    margin-right: auto;
+                }
+
+                &-ul{
+                    height: auto;
+                    // margin-left: 5px;
+                    list-style: none;
+                    transition: all 0.3s;
+                    display: none;
+
+                    & li{
+                        height: 40px;
+                        // padding: 0 2rem;
+
+                        &:not(:last-child){
+                            border-bottom: 1px solid rgba(gray,0.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,357 @@
+.enrollnow{
+    &__c{
+        padding: 2rem;
+        margin-bottom: 3rem;
+
+
+        & .timeline{
+            height: 12rem;
+            width: 100%;
+            // background-color: rgba(grey,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5rem;
+
+            & .stop{
+                height: 4rem;
+                width: 4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background-color: grey;
+                position: relative;
+
+                &:first-child{
+                    background-color: $color-primary;
+                }
+
+                & .num{
+                    color: white;
+                    text-align: center;
+                    font-size: 1.8rem;
+                    font-family: $primary-font;
+                }
+
+                & .text{
+                    position: absolute;
+                    top: 110%;
+                    width: 21rem;
+                    font-size: 1.6rem;
+                    font-family: $primary-font;
+                    text-align: center;
+
+                    @include respond(phone){
+                        width: 12rem;
+                    }
+                }
+            }
+
+            & .line{
+                width: calc(100% / 3);
+                height: 4px;
+                background-color: grey;
+
+                @include respond(phone){
+                    width: calc(100% / 4);
+                }
+            }
+        }
+
+        .form{
+
+            &__h{
+                margin-top: 3rem;
+                width: 100%;
+                background-color: $color-secondary;
+                padding: 0.2rem 1rem;
+
+                & h4{
+                    font-size: 2.4rem;
+                    font-family: $primary-font;
+                    color: white;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+            }
+
+            &__c{
+                margin: 0.6rem 0;
+                border: 1px solid rgba(grey,0.3);
+                background-color: rgba(grey,0.04);
+
+                &-c{
+                    padding: 1.4rem;
+
+                    &-i{
+                        display: flex;
+                        flex-direction: column;
+
+                        & label{
+                            font-size: 1.6rem;
+                            font-family: $primary-font;
+                        }
+
+                        & textarea{
+                            border: none;
+                            resize: vertical;
+                            border-radius: 3px;
+                            background-color: white;
+                            padding: 1rem;
+                            font-family: $primary-font;
+                            font-size: 1.6rem;
+                        }
+
+                    }
+                }
+
+                &-r{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: 1.4rem;
+
+                    @include respond(phone){
+                        flex-direction: column;
+                    }
+
+                    &:not(:last-child){
+                        border-bottom: 1px solid rgba(grey,0.3);
+                    }
+                    
+                    & .gallery{
+                        width: 100%;
+
+                        & p{
+                            font-size: 1.6rem;
+                            font-family: $primary-font;
+                        }
+
+                        & img{
+                            height: 12rem;
+                            width: calc(100% / 6);
+                            object-fit: contain;
+                            margin: 1rem;
+                        }
+                    }
+
+
+                    &-label{
+                        padding: 0.6rem 1.4rem;
+                        background-color: $color-primary;
+                        font-size: 1.6rem;
+                        color: white;
+                        text-align: center;
+                        font-family: $primary-font;
+                    }
+
+                    &-in{
+                        display: none;
+                    }
+
+
+                    &-img{
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 1.5rem;
+
+                        @include respond(phone){
+                            padding: 0.4rem;
+                            width: 100%;
+                        }
+
+                        & .display{
+                            height: 28rem;
+                            width: 50%;
+                            margin-bottom: 1rem;
+                            background-color: rgba(grey,0.1);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 1.4rem;
+                            font-family: $primary-font;
+
+                            @include respond(phone){
+                                width: 100%;
+                            }
+
+                            & img{
+                                height: 100%;
+                                width: 100%;
+                                object-fit: contain;
+                            }
+
+                        }
+
+                        & label{
+                            font-size: 1.6rem;
+                            font-family: $primary-font;
+                            padding: 0.6rem 1.4rem;
+                            color: white;
+                            background-color: $color-primary;
+                            text-align: center;
+                            width: 50%;
+
+                            @include respond(phone){
+                                width: 100%;
+                            }
+                        }
+                        
+                        & input{
+                            display: none;
+                        }
+                    }
+
+
+                    &-i{
+                        width: 48%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        @include respond(phone){
+                            width: 100%;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            
+                            &:not(:first-child){
+                                margin-top: 1rem;
+                            }
+                        }
+
+                        & label{
+                            font-size: 1.6rem;
+                            font-family: $primary-font;
+
+                            @include respond(phone){
+                                font-size: 2rem;
+                                margin-top: 1rem;
+                                margin-bottom: 0.6rem;
+                            }
+                        }
+
+                        & input,select{
+                            border: none;
+                            width: 50%;
+                            padding: 0.6rem 1.4rem;
+                            font-size: 1.6rem;
+                            font-family: $primary-font;
+                            border-radius: 3px;
+                            background-color: white;
+
+                            @include respond(phone){
+                                width: 100%;
+                                font-size: 2rem;
+                            }
+
+                            &:focus{
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+
+                
+
+                & .doc{
+                    display: flex;
+                    padding: 1.4rem;
+                    border-bottom: 1px solid rgba(grey,0.3);
+
+                    &__i{
+                        width: calc((100% - 2.8rem) / 3);
+                        margin: 0.6rem;
+
+                        
+                        &-h{
+                            background-color: rgba(grey,0.3);
+                            text-transform: uppercase;
+                            text-align: center;
+                            font-size: 1.6rem;
+                            font-family: $primary-font;
+                            font-weight: 200;
+                        }
+
+                        & .display{
+                            height: 14rem;
+                            width: 14rem;
+                            background-color: rgba(grey,0.1);
+                            margin: 1rem auto;
+                            border: 1px solid rgba(grey,0.6);
+                        }
+                        
+                        & label{
+                            display: inline-block;
+                            width: 100%;
+                            background-color: $color-primary;
+                            color: white;
+                            font-family: $primary-font;
+                            font-size: 1.8rem;
+                            text-align: center;
+                            cursor: pointer;
+                            padding: 0.6rem 1rem;
+                        }
+                    
+                        & input{
+                            display: none;
+                        }
+                    }
+                }
+
+                & .confirm{
+                    display: flex;
+                    margin: 1.4rem;
+
+                    & p{
+                        margin-left: 1rem;
+                        font-size: 1.4rem;
+                        font-family: $primary-font;
+                    }
+                }
+
+                & .btncontainer{
+                    width: 100%;
+                    padding: 1.4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    & .btn{
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+
+        & .confirm{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & h4{
+                font-size: 2.8rem;
+                font-family: $primary-font;
+            }
+
+            & p{
+                width: 60%;
+                font-size: 1.6rem;
+                text-align: center;
+                font-family: $primary-font;
+            }
+
+            & a{
+                padding: 0.8rem 1.4rem;
+                background-color: $color-primary;
+                color: white;
+                font-size: 1.6rem;
+                font-family: $primary-font;
+                margin: 1rem 0;
+            }
+        }
+    }
+}
